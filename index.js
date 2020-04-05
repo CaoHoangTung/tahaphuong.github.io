@@ -221,7 +221,7 @@
         break;
         case 'contact': 
           chooseNav('contact');
-          document.getElementById("link-cv").innerHTML = 'visit my CV here';
+          document.getElementById("link-cv").innerHTML = 'see my CV (pdf)';
         break;
         default: 
           console.log('scroll error')
@@ -361,6 +361,10 @@ function navScroll(id) {
   console.log(sectionHeight)
 
   $("html, body").stop().animate({scrollTop: sectionHeight}, 700, 'swing');
+
+  if (document.getElementById("nav-mobile")) {
+    setTimeout(()=>{toggleNavMobile()}, 500)
+  }
 }
 
 function textAppearsOnHover(textId) {
@@ -369,6 +373,38 @@ function textAppearsOnHover(textId) {
 
 function textDisappearsOutHover(textId) {
   document.getElementById(textId).style.opacity = "0";
+}
+
+// toggle nav mobile 
+
+function toggleNavMobile() {
+  let nav = document.getElementById("nav-mobile");
+  let divs = document.getElementById("nav-mobile").getElementsByTagName('div');
+
+
+  switch (nav.style.display) {
+    case "none":
+      nav.style.display = "flex"
+
+      setTimeout(()=>{
+        nav.style.height = "100vh"
+        for (let el of divs) {
+          el.style.opacity = "1"
+        }
+      }, 50)
+
+    break;
+    default:
+      nav.style.height = "0vh"
+      for (let el of divs) {
+        el.style.opacity = "0"
+      }
+
+      setTimeout(()=>{
+        nav.style.display = "none"
+      }, 400)
+    break;
+  }
 }
 
 // index of the drop

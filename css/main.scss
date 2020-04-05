@@ -18,6 +18,7 @@ $yellow: rgb(255,242,204);
 $blue: rgb(218,227,243);
 $green: rgb(211, 235, 211);
 $lightGray: rgb(207, 207, 207);
+$lightWhite: rgb(252, 252, 252);
 
 // Font weight
 $light: 400;
@@ -51,6 +52,8 @@ $quoteSectionHeight: 30vw;
 html,body {
   margin: 0;
   padding: 0;
+
+  background-color: $lightWhite;
 
   overflow-x: hidden;
   user-select: none;
@@ -91,12 +94,20 @@ a, button {
 }
 
 ::selection {
-  color: #ffffff;
+  color: $lightWhite;
   background: $lightGray;
 }
 
 // changes to mobile version
 #mobile {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav-mobile {
   display: none;
 }
 
@@ -142,7 +153,13 @@ a, button {
 @keyframes slideOpacity {
   0% {opacity: 0;}
   100% {opacity: 1;}
+}
 
+@keyframes homeCircleOpacity {
+  0% {opacity: 1;}
+  40% {opacity: 0;}
+  80% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 
@@ -167,7 +184,7 @@ a, button {
   height: 100vh;
   width: 100vw;
 
-  background-color: #ffffff;
+  background-color: $lightWhite;
   position: fixed;
   z-index: 50;
 
@@ -202,7 +219,7 @@ a, button {
 }
 
 // hide elements 
-#quote>div, #work>div, #about>div {
+#quote>div, #work>div, #about>div, #contact div {
   opacity: 0;
 }
 
@@ -212,7 +229,7 @@ a, button {
   width: $navWidth;
 
   border-left: $thinLine solid $lightGray;
-  background-color: white;
+  background-color: $lightWhite;
 
   position: fixed;
   right: 0;
@@ -280,7 +297,7 @@ a, button {
   position: fixed;
   bottom: $marginStandard*0.75;
 
-  z-index: 10;
+  z-index: 30;
 
   display: flex;
   align-items: center;
@@ -291,7 +308,7 @@ a, button {
 
 #link-cv {
   border: $thinLine solid $lightGray;
-  background-color: white;
+  background-color: $lightWhite;
   border-radius: 999px;
 
   padding: $paddingButton;
@@ -312,7 +329,7 @@ a, button {
   height: 0.25em;
   width: fit-content;
 
-  background-color: white;
+  background-color: $lightWhite;
   margin-right: $marginStandard;
   display: flex;
   align-items: center;
@@ -339,7 +356,8 @@ a, button {
 .home {
   padding: $marginStandard;
   position: relative;
-  z-index: 10;
+
+  z-index: 15;
 }
 
 // home header
@@ -396,6 +414,7 @@ a, button {
 }
 
 .home-click-on-it {
+  opacity: 0;
   margin-top: 1em;
 
   font-size: $fontSmall;
@@ -424,8 +443,46 @@ a, button {
   transition-timing-function: cubic-bezier(0.15,0.7,0.15,0.7);
 }
 
+
 .home-circle:hover {
   transform: scale(1.5);
+}
+
+
+.home-circle-2 {
+  cursor: pointer;
+
+  height: $imgHomeWidth*0.6;
+  width: $imgHomeWidth*0.6;
+  border-radius: 50%;
+
+  background-color: rgba($green, 0.3);
+  top: $imgHomeWidth*2;
+  left: $imgHomeWidth*0.5;
+
+  position: absolute;
+  z-index: -5;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  font-size: $fontSmall;
+  color: rgba(black, 0.5);
+
+  transition: all 0.4s;
+}
+
+
+.home-circle-2>div {
+  width: 60%;
+  animation: homeCircleOpacity 5s ease infinite;
+}
+
+.home-circle-2:active {
+  opacity: 0;
 }
 
 .home-img {
@@ -479,9 +536,12 @@ a, button {
 
 // quote part
 
-.quote  {
+.quote {
   margin-top: 30vw;
   padding-bottom: 10vw;
+
+  position: relative;
+  z-index: 20;
 }
 
 
@@ -501,6 +561,23 @@ a, button {
   color: rgb(51, 51, 51);
 }
 
+.quote .quote-img-hand {
+  height: $quoteSectionHeight;
+  
+  position: absolute;
+  z-index: 5;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+
+  opacity: 0.5;
+}
+
+.quote .quote-img-hand img {
+  width: $imgHandWidth;
+  transform: translate(-25vw, 0)
+}
 .quote-doublequotes {
   cursor: pointer;
 
@@ -530,23 +607,7 @@ a, button {
 
 
 
-.quote .quote-img-hand {
-  height: $quoteSectionHeight;
-  
-  position: absolute;
-  z-index: 5;
-  left: 0;
 
-  display: flex;
-  align-items: center;
-
-  opacity: 0.5;
-}
-
-.quote .quote-img-hand img {
-  width: $imgHandWidth;
-  transform: translate(-25vw, 0)
-}
 
 
 // work part
@@ -782,7 +843,7 @@ a, button {
 .work-showcase-webapp-block {
   width: 50%;  
 
-  background-color: white;
+  background-color: $lightWhite;
 
   display: flex;
   flex-direction: column;
@@ -1106,7 +1167,7 @@ a, button {
 
 
   font-size: $fontSemi;
-  color: #ffffff;
+  color: $lightWhite;
 
   transition: all 0.4s;
 }
@@ -1114,6 +1175,10 @@ a, button {
 .contact-circle:hover {
   cursor: pointer;
   transform: translate(0, -2vw);
+}
+
+.contact-circle-2 {
+  display: none;
 }
 
 @media only screen and (max-height: 300px) {
@@ -1160,7 +1225,7 @@ a, button {
 //   height: 6vw;
 //   width: 6vw;
 
-//   background-color: white;
+//   background-color: $lightWhite;
 //   box-shadow: 4px 4px 40px -20px $lightGray;
 
 //   font-size: $fontSmall;
@@ -1179,11 +1244,14 @@ a, button {
   position: fixed;
 
   animation: falling 3s ease-in;
+  transition: all 1s;
 }
 
 .deco:active {
   height: 6vw;
   width: 1.5vw;
+
+  opacity: 0;
 }
 
 .deco-1 {
@@ -1207,30 +1275,9 @@ a, button {
 }
 
 
-@media only screen and (max-aspect-ratio: 3/2), (max-width: 812px) {
-  // standardized size
-$mainWidth: 93vw; // scroll-bar == 1vw; nav == 7vw
-$marginStandard: 4vw;
-
-$paddingButton: 0.3em 1em;
-$thinLine: 0.05vw;
 
 
-// Font sizes 
-$fontSmall: calc(1vw + 2px);
-$fontSemi: calc(1.5vw + 2px);
-$fontSemiBig: calc(2vw + 2px);
-$fontSemiBigger: calc(3vw + 2px);
-$fontBig: calc(4vw + 2px);
-$fontHuge: calc(7vw + 2px);
-
-// components size
-$navWidth: 7vw;
-$imgHomeWidth: 25vw;
-$imgHandWidth: 20vw;
-$doublequotesWidth: 7vw;
-
-$quoteSectionHeight: 30vw;
+@media only screen and (max-aspect-ratio: 3/2), only screen and (max-width: 812px) {
 
 
   #mobile {
@@ -1239,12 +1286,14 @@ $quoteSectionHeight: 30vw;
 
     position: fixed;
     z-index: 25;
-    background-color: #ffffff;
+    background-color: $lightWhite;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    display: none;
   }
 
   #mobile div {
@@ -1255,9 +1304,499 @@ $quoteSectionHeight: 30vw;
   }
 
 
+// standardized size
+// $mainWidth: 93vw; // scroll-bar == 1vw; nav == 7vw
+$marginStandardM: 7vw;
+
+$paddingButton: 0.3em 1em;
+$thinLineM: 0.1vw;
+
+
+// Font sizes 
+$fontSmallM: 4vw;
+$fontSemiM: 5vw;
+$fontSemiBigM: 6.5vw;
+$fontSemiBiggerM: 9vw;
+$fontBigM: 12vw;
+$fontHugeM: 20vw;
+
+// components size
+$navWidth: 7vw;
+$imgHomeWidthM: 35vw;
+$imgHandWidth: 20vw;
+$doublequotesWidth: 7vw;
+
+$quoteSectionHeight: 30vw;
+
+
+  // hide components from desktop version 
+  .nav {
+    display: none;
+  }
+  .link {
+    display: none;
+  }
+
+
+  //main
   html,body {
     -ms-overflow-style: 0vw;  /* Internet Explorer 10+ */
     scrollbar-width: 0vw;
   }
 
+  #main, .main {
+    margin: 0;
+    width: 100vw;
+  }
+
+  .home {
+    width: 100vw - $marginStandardM*2;
+    padding: $marginStandardM;
+  }
+
+  .home-languages a {
+    font-size: $fontSemiM;
+    margin-left: 1em;
+  }
+  .home-header {
+    margin-top: $marginStandardM;
+    position: relative;
+    z-index: 3;
+  }
+  .home-pre-title {
+    font-size: $fontSemiBigM;
+  }
+
+  // home circles
+
+  .home-circle {
+    width: $imgHomeWidthM*2;
+    height: $imgHomeWidthM*2;
+
+    top: -30vw;
+    left: -25vw;
+
+    z-index: 1;
+  }
+
+  // may display: none the home-circle-2
+  .home-circle-2 {
+    width: $imgHomeWidthM*0.7;
+    height: $imgHomeWidthM*0.7;
+    background-color: rgba($green, 0.5);
+    border-radius: 50%;
+
+    left: 90vw;
+    top: 125vw;
+
+    // display: none;
+
+    font-size: $fontSmallM*0.75;
+  }
+
+  
+  .home-circle-2>div {  
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+      
+    margin: 0;
+    padding: 0;
+
+    text-align: right;
+    animation: none;
+  }
+
+  .home-circle-2>div>p {
+    width: 75%;
+  }
+
+  .home-circle-2:active, .home-circle-2>div:active {
+    opacity: 1;
+    background-color: rgba($green, 0.25);
+    left: 80vw;
+
+  }
+
+  // END home-circles
+
+  .home-title {
+    margin-top: $marginStandardM*1.5;
+    font-size: $fontHugeM;
+    text-align: right;
+
+    position: relative;
+    z-index: 20;
+  }
+
+  // sub title mobile
+  .home-sub-title-con {
+    margin-top: $marginStandardM*6;
+    margin-bottom: $marginStandardM;
+
+  }
+  .home-sub-title {
+    width: 100%;
+
+    font-size: $fontSemiM;
+  }
+  .home-click-on-it {
+    opacity: 1 !important;
+    font-size: $fontSmallM;
+  }
+
+
+  // home img
+
+  .home-img {
+    top: -$marginStandardM*12;
+    left: 0;
+  }
+  .home-img .home-img-filter, .home-img img {
+    height: $imgHomeWidthM;
+    width: $imgHomeWidthM;
+
+    left: -2vw;
+  }
+
+  .home-img .home-img-filter .home-img-filter-1 {
+    height: $imgHomeWidthM*0.5;
+    width: $imgHomeWidthM*0.5;
+  
+  }
+
+  // .quote part 
+
+  .quote {
+    margin-top: 40vw;
+    margin-bottom: 80vw;
+  }
+  .quote .quote-img-hand {
+    margin-top: -$marginStandardM;
+    left: -20vw;
+  }
+
+  .quote .quote-img-hand img{
+    width: $imgHomeWidthM*1.5;
+    transform: translate(-40vw, 0)
+  }
+  .quote-doublequotes {
+    margin-top: -1.2em;
+    left: -12vw;
+    font-size: $fontHugeM*1.2;
+    transform: translate(-40vw, 0)
+
+  }
+
+  .quote .quote-text {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    align-items: flex-start;
+    text-align: center;
+    
+    font-size: $fontSemiBiggerM;
+  }
+
+  .quote .quote-text p {
+    width: 50%;
+    margin-top: 0;
+  }
+
+  // work 
+  .work {
+    margin-top: 0;
+  }
+  .work-title {
+    font-size: $fontBigM;
+  }
+  .work-intro {
+    font-size: $fontSemiM;
+  }
+  .work-main {
+    width: 100%;
+    border: none;
+    padding-top: $marginStandardM;
+
+    margin-top: $marginStandardM*2;
+    margin-bottom: $marginStandardM;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .work-main .work-main-block {
+    height: 15vw;
+    width: 50%;
+    border-left: none;
+  }
+
+  .work-main-block-title {
+    font-size: $fontSemiM;
+  }
+
+  .work-main-block-des {
+    font-size: $fontSmallM*0.6;
+    color: $lightGray;
+  }
+
+  // showcase artwork 
+  .work-showcase-artworks img {
+    width: 100%;
+  }
+  .work-showcase-artworks-pallete {
+    display: none;
+  }
+
+  // showcase webapp
+
+  .work-showcase-webapp-block {
+    width: 30vw;
+  }
+  .work-showcase-webapp-des {
+    font-size: $fontSmallM*0.75;
+
+  }
+  .work-showcase-webapp-link {
+    font-size: $fontSmallM*0.6;
+  }
+  .work-showcase-webapp-img {
+    width: 70vw;
+    height: 40vw;
+
+  }
+
+  // showcase react native 
+  .work-showcase-reactnative {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .work-showcase-reactnative img {
+    width: 100vw
+  }
+
+  .work-showcase-reactnative-block-title {
+    font-size: $fontSemiM;
+  }
+  .work-showcase-reactnative-block-des {
+    font-size: $fontSmallM;
+  }
+
+  // work skills mobile
+  .work-skills {
+    width: 100%;
+    height: 40vw;
+
+
+    display: flex;
+    flex-direction: column;  
+    justify-content: space-evenly;  
+  }
+  .work-skills .work-skills-title {
+    width: fit-content;
+    margin: 0;
+    text-align: center;
+    font-size: $fontSemiBigM;
+  }
+
+  .work-skills .work-skills-main {
+    width: 100vw;
+    font-size: $fontSmallM;
+  }
+
+  .work-skills .work-skills-main-1 {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+  }
+
+  // about mobile
+  .about {
+    margin-top: $marginStandardM*4;
+  }
+  .about-title {
+    font-size: $fontBigM;
+  }
+  .about-main-block {
+    padding-top: $marginStandardM;
+    padding-bottom: $marginStandardM;
+
+  }
+  .about-main-block .about-main-block-ques {
+    font-size: $fontSemiBigM*0.8;
+  }
+  .about-main-block .about-main-block-ans {
+    font-size: $fontSmallM;
+    letter-spacing: -0.05em;
+  }
+
+  // contact mobile 
+  .contact {
+    min-height: 100vw;
+    margin-top: 40vw;
+    margin-bottom: 50vw;
+  }
+
+  .contact-title {
+    font-size: $fontSemiBiggerM;
+    margin-bottom: $marginStandardM;
+    
+  }
+
+  .contact-circle {
+    height: 18vw;
+    width: 18vw;
+
+    right: 5vw;
+    margin-top: 20vw;
+
+    font-size: $fontSmallM*0.8;
+  }
+
+  .contact-circle-2 {
+    cursor: pointer;
+    height: 30vw;
+    width: 30vw;
+    
+    border-radius: 50%;
+    background-color: rgba($blue, 0.5);
+    
+    display: block;
+    position: absolute;
+    z-index: 10;
+    left: -15vw;
+  
+    margin-top: -10vw;
+  }
+  
+  .contact-circle-2:active {
+    margin-top: -5vw;
+  }
+
+  .contact-block {
+    margin-bottom: $marginStandardM;
+  }
+  .contact-block-info, .contact-block a {
+    font-size: $fontSmallM*1.2;
+  }
+  .work-showcase-artworks-copied {
+    font-size: $fontSmallM*0.8;
+  }
+  // extra components
+
+  .load-title {
+    font-size: $fontSemiBiggerM;
+  }
+  .load-sub-title {
+    font-size: $fontSmallM;
+  }
+  // hamburger
+  .hamburger {
+    height: $marginStandardM*2;
+    width: $marginStandardM*2;
+    background-color: rgba(255, 255, 255, 0.6);
+
+    border-radius: 50%;
+    border: $thinLineM solid $lightGray;
+
+    position: fixed;
+    z-index: 40;
+    bottom: $marginStandardM*0.75;
+    right: $marginStandardM*0.75;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: $fontSemiBigM;
+  }
+
+  // nav-mobile 
+  .nav-mobile {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba($lightWhite, 0.95);
+
+    position: fixed;
+    z-index: 35;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    letter-spacing: -0.07em;
+    text-align: center;
+
+    transition: all 0.4s;
+  }
+
+  .nav-mobile div {
+    transition: all 0.2s;
+  }
+
+  .nav-mobile-head {
+    margin-bottom: $marginStandardM;
+    font-size: $fontSmallM;
+  }
+
+  .nav-mobile-opt {
+    width: fit-content;
+    margin-bottom: $marginStandardM*0.5;
+
+    background-position: 0;
+    background-size: 200%;
+    margin-bottom: 0.5em;
+
+    font-size: $fontSemiBiggerM;
+    font-weight: $bold;
+
+    transition: all 0.25s;
+  }
+
+  .nav-mobile-opt:hover {
+    background-position: -100%;
+  }
+
+  .nav-mobile-opt-1 {
+    background-image: linear-gradient(to right, transparent 50%, $green 50%);
+  }
+  .nav-mobile-opt-2 {
+    background-image: linear-gradient(to right, transparent 50%, $pink 50%);
+  }
+  .nav-mobile-opt-3 {
+    background-image: linear-gradient(to right, transparent 50%, $yellow 50%);
+  }
+  .nav-mobile-opt-4 {
+    background-image: linear-gradient(to right, transparent 50%, $blue 50%);
+  }
+
+  .link-cv-con {
+    margin-bottom: $marginStandardM*2;
+    margin-top: $marginStandardM;
+
+  }
+  .link-cv {
+    padding-bottom: 0.1em;
+    border-bottom: 0.3em solid rgba($lightGray, 0.3)
+  }
+  .link-cv:active {
+    opacity: 0.6;
+  }
+
+  // deco component
+  .deco {
+    height: 12vw;
+    width: 3vw;
+  }
 }
