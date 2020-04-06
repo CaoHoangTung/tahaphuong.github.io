@@ -1319,7 +1319,7 @@ $fontSemiM: 5vw;
 $fontSemiBigM: 6.5vw;
 $fontSemiBiggerM: 9vw;
 $fontBigM: 12vw;
-$fontHugeM: 20vw;
+$fontHugeM: 19vw;
 
 // components size
 $navWidth: 7vw;
@@ -1351,8 +1351,8 @@ $quoteSectionHeight: 30vw;
   }
 
   .home {
-    width: 100vw - $marginStandardM*2;
-    padding: $marginStandardM;
+    width: 100vw - $marginStandard*2;
+    padding: $marginStandard;
     padding-top: $marginStandardM*0.2;
   }
 
@@ -1389,7 +1389,7 @@ $quoteSectionHeight: 30vw;
     border-radius: 50%;
 
     left: 90vw;
-    top: 120vw;
+    top: 110vw;
 
     // display: none;
 

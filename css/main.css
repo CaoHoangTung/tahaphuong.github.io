@@ -1479,8 +1479,8 @@ a, button {
     width: 100vw;
   }
   .home {
-    width: 86vw;
-    padding: 7vw;
+    width: 92vw;
+    padding: 4vw;
     padding-top: 1.4vw;
   }
   .home-languages a {
@@ -1508,7 +1508,7 @@ a, button {
     background-color: rgba(211, 235, 211, 0.5);
     border-radius: 50%;
     left: 90vw;
-    top: 120vw;
+    top: 110vw;
     font-size: 3vw;
   }
   .home-circle-2 > div {
@@ -1532,7 +1532,7 @@ a, button {
   }
   .home-title {
     margin-top: 10.5vw;
-    font-size: 20vw;
+    font-size: 19vw;
     text-align: right;
     position: relative;
     z-index: 20;
@@ -1578,7 +1578,7 @@ a, button {
   .quote-doublequotes {
     margin-top: -1.2em;
     left: -12vw;
-    font-size: 24vw;
+    font-size: 22.8vw;
     -webkit-transform: translate(-40vw, 0);
             transform: translate(-40vw, 0);
   }
