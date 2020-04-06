@@ -1554,21 +1554,32 @@ $quoteSectionHeight: 30vw;
   }
 
   // showcase webapp
+  .work-showcase-webapp>div {
+    display: flex;
+    flex-direction: column;
+  }
 
+  .work-showcase-webapp>div:first-child, .work-showcase-webapp>div:last-child {
+    flex-direction: column-reverse;
+  }
+
+
+  .work-showcase-webapp-img {
+    width: 100vw;
+    height: 55vw;
+  }
   .work-showcase-webapp-block {
-    width: 30vw;
+    width: 100vw;
+    height: 25vw;
+
   }
   .work-showcase-webapp-des {
-    font-size: $fontSmallM*0.75;
-
+    font-size: $fontSmallM;
+    letter-spacing: -0.05em;
   }
   .work-showcase-webapp-link {
-    font-size: $fontSmallM*0.6;
-  }
-  .work-showcase-webapp-img {
-    width: 70vw;
-    height: 40vw;
-
+    font-size: $fontSmallM*0.8;
+    letter-spacing: -0.05em;
   }
 
   // showcase react native 

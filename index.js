@@ -161,12 +161,15 @@
   window.onload = init;
 
   function init() {
-    let loadScreen =document.getElementById("load") 
+    let main = document.getElementById("main");
+
+    let loadScreen = document.getElementById("load") 
     loadScreen.style.transition = "all 0.4s";
     loadScreen.style.opacity = "0";
 
     setTimeout(function(){
       loadScreen.style.display = "none";
+      main.style.opacity = "1"
     }, 400)
 
     scrollToTop();
