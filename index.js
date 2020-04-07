@@ -418,10 +418,9 @@ function falling() {
   if (rainIndex<=2000) {
     let left = Math.floor(Math.random() * Math.floor(100)) + 1; // choose between 1 and 100 vw 
     let color = Math.floor(Math.random() * Math.floor(4)) + 1 // choose between 1, 2, 3 or 4;
-    let z = Math.floor(Math.random() * Math.floor(2)) == 0 ? -10 : 30;
 
     // add after a random elements
-    $('#rain').after('<div id="rain-' + String(rainIndex) + '" class="deco deco-' + String(color) + '" style="left:' + String(left) + 'vw; z-index:' + String(z) + '"></div>')
+    $('#rain').after('<div id="rain-' + String(rainIndex) + '" class="deco deco-' + String(color) + '" style="left:' + String(left) + 'vw; z-index: 60"></div>')
 
     let thisIndex = "rain-" + rainIndex;
 
