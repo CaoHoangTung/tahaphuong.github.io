@@ -108,7 +108,7 @@ a, button {
   display: none;
 }
 
-.nav-mobile {
+.nav-mobile, #nav-mobile {
   display: none;
 }
 
@@ -327,6 +327,7 @@ a, button {
 
 
 .link-logo {
+  opacity: 0;
   height: 0.25em;
   width: fit-content;
 
