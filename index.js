@@ -365,8 +365,9 @@ function navScroll(id) {
 
   $("html, body").stop().animate({scrollTop: sectionHeight}, 700, 'swing');
 
-  if (document.getElementById("nav-mobile")) {
+  if (window.innerWidth < 812 || window.innerWidth/window.innerHeight < 1.5 ) {
     setTimeout(()=>{toggleNavMobile()}, 500)
+
   }
 }
 
