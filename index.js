@@ -95,6 +95,7 @@
 
     <div class="skip work-showcase-webapp">
       <div class="skip">
+        <div class="skip work-showcase-webapp-img" style="background-image: url('./img/health.png');"></div>
         <div class="skip work-showcase-webapp-block">
           <div class="skip work-showcase-webapp-des">My first website! You can take a health&lifestyle test and find some tips here. (self-design)</div>
           <div class="skip work-showcase-webapp-link">
@@ -102,11 +103,9 @@
             <a target="_blank" href="https://github.com/tahaphuong/health">Github link</a>
           </div>
         </div>
-        <div class="skip work-showcase-webapp-img" style="background-image: url('./img/health.png');"></div>
       </div>
 
       <div class="skip">
-        <div class="skip work-showcase-webapp-img" style="background-image: url('./img/hac.png');"></div>
         <div class="skip work-showcase-webapp-block">
           <div class="skip work-showcase-webapp-des">A landing page for my school's art club. (self-design)</div>
           <div class="skip work-showcase-webapp-link">
@@ -114,17 +113,18 @@
             <a target="_blank" href="https://github.com/hsgsartclub/hsgsartclub.github.io">Github link</a>
           </div>
         </div>
+        <div class="skip work-showcase-webapp-img" style="background-image: url('./img/hac.png');"></div>
       </div>
 
       <div class="skip">
+        <div class="skip work-showcase-webapp-img" style="background-image: url('./img/udic.png');"></div>
         <div class="skip work-showcase-webapp-block">
           <div class="skip work-showcase-webapp-des">A landing page I created, based on available design.</div>
           <div class="skip work-showcase-webapp-link">
-            <a target="_blank" href="#">Demo link</a>
-            <a target="_blank" href="#">Github link</a>
+            <a target="_blank" href="https://tahaphuong.github.io/udicTest">Demo link</a>
+            <a target="_blank" href="https://github.com/tahaphuong/udicTest">Github link</a>
           </div>
         </div>
-        <div class="skip work-showcase-webapp-img" style="background-image: url('./img/udic.png');"></div>
       </div>
 
     </div>
