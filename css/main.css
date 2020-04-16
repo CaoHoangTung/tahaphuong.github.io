@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #fcfcfc;
+  background-color: #fafafa;
   overflow-x: hidden;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -41,12 +41,12 @@ a, button {
 ::-moz-selection {
   /* Code for Firefox */
   color: ffffff;
-  background: #cfcfcf;
+  background: #bebebe;
 }
 
 ::selection {
-  color: #fcfcfc;
-  background: #cfcfcf;
+  color: #fafafa;
+  background: #bebebe;
 }
 
 #mobile {
@@ -340,7 +340,7 @@ a, button {
 .load {
   height: 100vh;
   width: 100vw;
-  background-color: #fcfcfc;
+  background-color: #fafafa;
   position: fixed;
   z-index: 50;
   display: -webkit-box;
@@ -359,7 +359,7 @@ a, button {
 }
 
 .load-title {
-  color: #cfcfcf;
+  color: #bebebe;
   font-size: calc(2vw + 2px);
   letter-spacing: -0.05em;
 }
@@ -372,7 +372,7 @@ a, button {
 
 .load-sub-title {
   font-size: calc(1vw + 2px);
-  color: #cfcfcf;
+  color: #bebebe;
 }
 
 #main {
@@ -386,8 +386,8 @@ a, button {
 .nav {
   height: 100vh;
   width: 7vw;
-  border-left: 0.05vw solid #cfcfcf;
-  background-color: #fcfcfc;
+  border-left: 0.05vw solid #bebebe;
+  background-color: #fafafa;
   position: fixed;
   right: 0;
   z-index: 20;
@@ -481,8 +481,8 @@ a, button {
 }
 
 #link-cv {
-  border: 0.05vw solid #cfcfcf;
-  background-color: #fcfcfc;
+  border: 0.05vw solid #bebebe;
+  background-color: #fafafa;
   border-radius: 999px;
   padding: 0.3em 1em;
   margin-left: 4vw;
@@ -492,7 +492,7 @@ a, button {
 
 #link-cv-click-on-it {
   margin-left: 1em;
-  color: #cfcfcf;
+  color: #bebebe;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
@@ -503,7 +503,7 @@ a, button {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: #fcfcfc;
+  background-color: #fafafa;
   margin-right: 4vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -598,7 +598,7 @@ a, button {
   opacity: 0;
   margin-top: 1em;
   font-size: calc(1vw + 2px);
-  color: #cfcfcf;
+  color: #bebebe;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -827,8 +827,8 @@ a, button {
 .work-main {
   width: 100%;
   margin-top: 4vw;
-  border-top: 0.05vw solid #cfcfcf;
-  border-bottom: 0.05vw solid #cfcfcf;
+  border-top: 0.05vw solid #bebebe;
+  border-bottom: 0.05vw solid #bebebe;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 25% 25% 25% 25%;
@@ -838,7 +838,7 @@ a, button {
 .work-main-block {
   height: 12vw;
   background-color: transparent;
-  border-left: 0.05vw solid #cfcfcf;
+  border-left: 0.05vw solid #bebebe;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -886,7 +886,7 @@ a, button {
 
 #work-showcase {
   width: 100%;
-  border-bottom: 0.05vw solid #cfcfcf;
+  border-bottom: 0.05vw solid #bebebe;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
@@ -914,7 +914,7 @@ a, button {
   position: relative;
   bottom: 0.5vw;
   font-size: calc(1vw + 2px);
-  color: #cfcfcf;
+  color: #bebebe;
   letter-spacing: -0.05em;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -1016,7 +1016,7 @@ a, button {
 
 .work-showcase-webapp-block {
   width: 50%;
-  background-color: #fcfcfc;
+  background-color: #fafafa;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1115,7 +1115,7 @@ a, button {
 .work-skills {
   width: 100%;
   height: 15vw;
-  border-bottom: 0.05vw solid #cfcfcf;
+  border-bottom: 0.05vw solid #bebebe;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1211,7 +1211,7 @@ a, button {
 }
 
 .about-main-block {
-  border-bottom: 0.05vw solid #cfcfcf;
+  border-bottom: 0.05vw solid #bebebe;
   padding: 4vw;
 }
 
@@ -1345,7 +1345,7 @@ a, button {
       -ms-flex-align: center;
           align-items: center;
   font-size: calc(1.5vw + 2px);
-  color: #fcfcfc;
+  color: #fafafa;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
@@ -1443,7 +1443,7 @@ a, button {
     width: 100vw;
     position: fixed;
     z-index: 25;
-    background-color: #fcfcfc;
+    background-color: #fafafa;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1636,7 +1636,7 @@ a, button {
   }
   .work-main-block-des {
     font-size: 2.4vw;
-    color: #cfcfcf;
+    color: #bebebe;
   }
   .work-showcase-artworks img {
     width: 100%;
@@ -1763,7 +1763,7 @@ a, button {
     margin-bottom: 50vw;
   }
   .contact-title {
-    font-size: 9vw;
+    font-size: 7.5vw;
     margin-bottom: 7vw;
   }
   .contact-circle {
@@ -1771,7 +1771,8 @@ a, button {
     width: 18vw;
     right: 5vw;
     margin-top: 20vw;
-    font-size: 3.2vw;
+    font-size: 3vw;
+    text-align: center;
   }
   .contact-circle-2 {
     cursor: pointer;
@@ -1808,7 +1809,7 @@ a, button {
     width: 14vw;
     background-color: rgba(253, 253, 253, 0.6);
     border-radius: 50%;
-    border: 0.1vw solid #cfcfcf;
+    border: 0.1vw solid #bebebe;
     position: fixed;
     z-index: 40;
     bottom: 5.25vw;
@@ -1834,7 +1835,7 @@ a, button {
   .nav-mobile {
     width: 100vw;
     height: 100vh;
-    background-color: rgba(252, 252, 252, 0.95);
+    background-color: rgba(250, 250, 250, 0.95);
     position: fixed;
     z-index: 35;
     display: -webkit-box;
@@ -1902,7 +1903,7 @@ a, button {
   .link-cv {
     height: 2em;
     padding-bottom: 0.1em;
-    border-bottom: 0.3em solid rgba(207, 207, 207, 0.3);
+    border-bottom: 0.3em solid rgba(190, 190, 190, 0.3);
     font-size: 4vw;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
