@@ -56,20 +56,20 @@
       <div class="skip">
         <div class="skip work-showcase-webapp-img" style="background-image: url('./img/borrowmoney.png');"></div>
         <div class="skip work-showcase-webapp-block">
-          <div class="skip work-showcase-webapp-des">User can use this web app to manage the money log, when they lend/borrow money.</div>
+          <div class="skip work-showcase-webapp-des">Schulden-Tracker und Erinnerung per Email</div>
           <div class="skip work-showcase-webapp-link">
-            <a target="_blank" href="https://borrowmoney-thp.herokuapp.com/">Demo link</a>
-            <a target="_blank" href="https://github.com/tahaphuong/borrowMoney">Github link</a>
+            <a target="_blank" href="https://borrowmoney-thp.herokuapp.com/">demo</a>
+            <a target="_blank" href="https://github.com/tahaphuong/borrowMoney">github</a>
           </div>
         </div>
       </div>
 
       <div class="skip">
         <div class="skip work-showcase-webapp-block">
-          <div class="skip work-showcase-webapp-des">A simple chat webapp.</div>
+          <div class="skip work-showcase-webapp-des">ein simple Chat Web-app</div>
           <div class="skip work-showcase-webapp-link">
-            <a target="_blank" href="https://tahaphuong.github.io/chat">Demo link</a>
-            <a target="_blank" href="https://github.com/tahaphuong/chat">Github link</a>
+            <a target="_blank" href="https://tahaphuong.github.io/chat">demo</a>
+            <a target="_blank" href="https://github.com/tahaphuong/chat">github</a>
           </div>
         </div>
         <div class="skip work-showcase-webapp-img" style="background-image: url('./img/chat.png');"></div>
@@ -78,10 +78,10 @@
       <div class="skip">
         <div class="skip work-showcase-webapp-img" style="background-image: url('./img/eclass.png');"></div>
         <div class="skip work-showcase-webapp-block">
-          <div class="skip work-showcase-webapp-des">A homework platform (with deadline) connecting teachers and students.</div>
+          <div class="skip work-showcase-webapp-des">Hausaufgaben-Manager für Lehrer und Schüler.</div>
           <div class="skip work-showcase-webapp-link">
-            <a target="_blank" href="https://eclass-thp.herokuapp.com/">Demo link</a>
-            <a target="_blank" href="https://github.com/tahaphuong/eclass">Github link</a>
+            <a target="_blank" href="https://eclass-thp.herokuapp.com/">demo</a>
+            <a target="_blank" href="https://github.com/tahaphuong/eclass">github</a>
           </div>
         </div>
       </div>
@@ -95,20 +95,20 @@
       <div class="skip">
         <div class="skip work-showcase-webapp-img" style="background-image: url('./img/health.png');"></div>
         <div class="skip work-showcase-webapp-block">
-          <div class="skip work-showcase-webapp-des">My first website! You can take a health&lifestyle test and find some tips here. (self-design)</div>
+          <div class="skip work-showcase-webapp-des">Meine erste Webseite!<br>Gesundheit/Lebenstil Tipps & Tests(self-design)</div>
           <div class="skip work-showcase-webapp-link">
-            <a target="_blank" href="https://tahaphuong.github.io/health">Demo link</a>
-            <a target="_blank" href="https://github.com/tahaphuong/health">Github link</a>
+            <a target="_blank" href="https://tahaphuong.github.io/health">demo</a>
+            <a target="_blank" href="https://github.com/tahaphuong/health">github</a>
           </div>
         </div>
       </div>
 
       <div class="skip">
         <div class="skip work-showcase-webapp-block">
-          <div class="skip work-showcase-webapp-des">A landing page for my school's art club. (self-design)</div>
+          <div class="skip work-showcase-webapp-des">Ein Landing-Page für den Kunst-klub meiner Schule. (self-design)</div>
           <div class="skip work-showcase-webapp-link">
-            <a target="_blank" href="https://hsgsartclub.github.io">Demo link</a>
-            <a target="_blank" href="https://github.com/hsgsartclub/hsgsartclub.github.io">Github link</a>
+            <a target="_blank" href="https://hsgsartclub.github.io">demo</a>
+            <a target="_blank" href="https://github.com/hsgsartclub/hsgsartclub.github.io">github</a>
           </div>
         </div>
         <div class="skip work-showcase-webapp-img" style="background-image: url('./img/hac.png');"></div>
@@ -117,10 +117,10 @@
       <div class="skip">
         <div class="skip work-showcase-webapp-img" style="background-image: url('./img/udic.png');"></div>
         <div class="skip work-showcase-webapp-block">
-          <div class="skip work-showcase-webapp-des">A landing page I created, based on available design.</div>
+          <div class="skip work-showcase-webapp-des">Ein Landing-Page für ein Immobilienunternehmen</div>
           <div class="skip work-showcase-webapp-link">
-            <a target="_blank" href="https://tahaphuong.github.io/udicTest">Demo link</a>
-            <a target="_blank" href="https://github.com/tahaphuong/udicTest">Github link</a>
+            <a target="_blank" href="https://tahaphuong.github.io/udicTest">demo</a>
+            <a target="_blank" href="https://github.com/tahaphuong/udicTest">github</a>
           </div>
         </div>
       </div>
@@ -128,13 +128,13 @@
     </div>
     `,
 
-    "reactnative-title": `
-    <div class="skip work-showcase-reactnative" id="work-showcase-reactnative">
+    "mobile-title": `
+    <div class="skip work-showcase-mobile" id="work-showcase-mobile">
           <img src="./img/film.jpg"/>
-          <div class="skip work-showcase-reactnative-block">
-            <div class="skip work-showcase-reactnative-block-title">A film app</div>
+          <div class="skip work-showcase-mobile-block">
+            <div class="skip work-showcase-mobile-block-title">A film app</div>
             <br><br>
-            <div class="skip work-showcase-reactnative-block-des">
+            <div class="skip work-showcase-mobile-block-des">
               When user creates an acount, a user store will be automatically created on firestore. User can look up film and save the film to the download list.
               <br><br>
               I use "global state" to make sure the data changes will be updated in all screens.
@@ -222,7 +222,7 @@
         break;
         case 'contact': 
           chooseNav('contact');
-          document.getElementById("link-cv").innerHTML = 'see my CV (pdf)';
+          document.getElementById("link-cv").innerHTML = 'mein Lebenslauf besuchen (pdf)';
         break;
         default: 
           console.log('scroll error')
@@ -259,7 +259,7 @@
         break;
         case 'contact': 
           chooseNav('about');
-          document.getElementById("link-cv").innerHTML = 'my CV';
+          document.getElementById("link-cv").innerHTML = 'mein Lebenslauf';
         break;
 
         default: 

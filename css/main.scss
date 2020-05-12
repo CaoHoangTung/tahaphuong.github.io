@@ -722,8 +722,6 @@ a, button {
 
 }
 
-
-
 .work-main-block-des {
   font-size: $fontSmall;
   text-align: center;
@@ -843,9 +841,10 @@ a, button {
 
 
 .work-showcase-webapp-block {
-  width: 50%;  
+  width: calc(50% - 6vw);  
 
   background-color: $lightWhite;
+  padding: 0 3vw;
 
   display: flex;
   flex-direction: column;
@@ -872,47 +871,57 @@ a, button {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-
 }
 
 .work-showcase-webapp-link>a {
   cursor: pointer;
+  height: 0.25em;
 
-  padding-bottom: 0.1em;
-  border-bottom: 0.3em solid $blue;
+  // padding-bottom: 0.1em;
+  // border-bottom: 0.3em solid $blue;
+  display: flex;
+  align-items: center;
+
+  background-color: $blue;
   transition: all 0.4s;
+
+  font-size: $fontSemi;
+  font-family: $fontDisplay;
+  color: rgb(45, 45, 45);
 }
 
 .work-showcase-webapp-link>a:hover {
-  border-bottom: 0.3em solid $pink;
+  // border-bottom: 0.3em solid $pink;
+  background-color: $pink;
 }
 
 .work-showcase-webapp-link>a:active {
-  border-bottom: 0.3em solid $yellow;
+  // border-bottom: 0.3em solid $yellow;
+  background-color: $yellow;
 }
 
 
 // showcase react native 
-.work-showcase-reactnative {
+.work-showcase-mobile {
   display: flex
 }
 
-.work-showcase-reactnative-block {
+.work-showcase-mobile-block {
   padding: $marginStandard
 }
 
-.work-showcase-reactnative-block-title {
+.work-showcase-mobile-block-title {
   font-size: $fontSemiBigger;
   font-weight: $bold;
-  letter-spacing: -0.1em;
+  letter-spacing: -0.05em;
 }
 
-.work-showcase-reactnative-block-des {
+.work-showcase-mobile-block-des {
   font-size: $fontSemi;
   letter-spacing: -0.04em;
 }
 
-.work-showcase-reactnative-block-des a {
+.work-showcase-mobile-block-des a {
   cursor: pointer;
 
   padding-bottom: 0.1em;
@@ -920,16 +929,15 @@ a, button {
   transition: all 0.4s;
 }
 
-.work-showcase-reactnative-block-des a:hover {
+.work-showcase-mobile-block-des a:hover {
   border-bottom: 0.3em solid $pink;
 }
 
-.work-showcase-reactnative-block-des a:active {
+.work-showcase-mobile-block-des a:active {
   border-bottom: 0.3em solid $yellow;
 }
 
-
-.work-showcase-reactnative img {
+.work-showcase-mobile img {
   width: $mainWidth*0.5
 }
 
@@ -937,50 +945,36 @@ a, button {
 
 .work-skills {
   width: 100%;
-  height: 15vw;
+  padding: 5vw $marginStandard * 2;
 
   border-bottom: $thinLine solid $lightGray;
 
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 
 .work-skills .work-skills-title {  
-  width: 33.333%;
-
   position: relative;
   z-index: 1;
+
+  margin-bottom: $marginStandard;
 
   font-size: $fontSemiBigger;
   font-weight: $bold;
   letter-spacing: -0.1em;
 }
 
-.work-skills .work-skills-title>div {
-  cursor: pointer;
-  width: 2em;
-  margin-left: $marginStandard;
-  border-bottom: 0.1em solid $pink;
-  transition: all 0.4s;
-}
-
-.work-skills .work-skills-title>div:active {
-  width: 0;
-}
-
-
 .work-skills .work-skills-main {
-  width: 66.6666%;
+  width: 100%;
 
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
 
-  font-size: $fontSemi;
+  font-size: $fontSemiBig;
 }
 
-.work-skills .work-skills-main>div {
+.work-skills .work-skills-main .work-skills-main-1 {
   width: 50%;
-
 }
 
 // about
@@ -1053,10 +1047,11 @@ a, button {
 }
 
 .about-main-block .about-main-block-ques {
-  font-family: $fontDisplay;
-  // font-weight: $bold;
-  font-size: $fontSemiBig;
   margin-bottom: 0.5em;
+
+  font-weight: $bold;
+  font-size: $fontSemiBig;
+  letter-spacing: -0.075em;
 }
 
 .about-main-block .about-main-block-ans {
@@ -1095,7 +1090,7 @@ a, button {
   height: 0.6em;
   width: 10em;
 
-  background-color: $green;
+  background-color: rgba($green, 0.5);
 
   position: relative;
   z-index: 1;
@@ -1166,7 +1161,6 @@ a, button {
   display: flex;
   justify-content: center;
   align-items: center;
-
 
   font-size: $fontSemi;
   color: $lightWhite;
@@ -1543,8 +1537,9 @@ $quoteSectionHeight: 30vw;
   }
 
   .work-main-block-des {
-    font-size: $fontSmallM*0.6;
-    color: $lightGray;
+    display: none;
+    // font-size: $fontSmallM*0.6;
+    // color: $lightGray;
   }
 
   // showcase artwork 
@@ -1556,6 +1551,9 @@ $quoteSectionHeight: 30vw;
   }
 
   // showcase webapp
+  .work-showcase-webapp {
+    padding: 5vw 5vw;
+  }
   .work-showcase-webapp>div {
     display: flex;
     flex-direction: column;
@@ -1565,80 +1563,75 @@ $quoteSectionHeight: 30vw;
     flex-direction: column-reverse;
   }
 
-
   .work-showcase-webapp-img {
-    width: 100vw;
+    width: 100%;
     height: 55vw;
   }
   .work-showcase-webapp-block {
-    width: 100vw;
-    height: 25vw;
-
+    width: 100%;
+    padding: 5vw 0;
   }
   .work-showcase-webapp-des {
+    width: 100%;
+    margin-bottom: 3vw;
     font-size: $fontSmallM;
     letter-spacing: -0.05em;
   }
-  .work-showcase-webapp-link {
-    font-size: $fontSmallM*0.8;
+  .work-showcase-webapp-link>a {
+    font-size: $fontSemiM;
     letter-spacing: -0.05em;
   }
 
   // showcase react native 
-  .work-showcase-reactnative {
+  .work-showcase-mobile {
     display: flex;
     flex-direction: column;
   }
 
-  .work-showcase-reactnative img {
+  .work-showcase-mobile img {
     width: 100vw
   }
 
-  .work-showcase-reactnative-block-title {
+  .work-showcase-mobile-block-title {
     font-size: $fontSemiM;
   }
-  .work-showcase-reactnative-block-des {
+  .work-showcase-mobile-block-des {
     font-size: $fontSmallM;
   }
 
   // work skills mobile
   .work-skills {
     width: 100%;
-    height: 45vw;
+    height: fit-content;
+    padding: 15vw $marginStandardM;
 
     display: flex;
     flex-direction: column;  
-    justify-content: space-evenly;  
   }
   .work-skills .work-skills-title {
-    width: fit-content;
-    
-    text-align: center;
-    font-size: $fontSemiBigM;
-  }
-
-  .work-skills .work-skills-title div {
-    height: 1.1em;
-    border-bottom-width: 0.15em;
-    margin: 0;
+    text-align: left;
+    font-size: $fontSemiBiggerM * 1.2;
   }
 
   .work-skills .work-skills-main {
     width: 100vw;
-    font-size: $fontSmallM;
+    font-size: $fontSemiBigM;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .work-skills .work-skills-main-1 {
-    width: 50%;
+    width: 100vw;
+    margin-top: 5vw;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
+    text-align: left;
   }
 
+  .work-skills .work-skills-main-1>div {
+    width: 100vw;
+  }
   // about mobile
   .about {
     margin-top: $marginStandardM*4;
@@ -1652,10 +1645,10 @@ $quoteSectionHeight: 30vw;
 
   }
   .about-main-block .about-main-block-ques {
-    font-size: $fontSemiBigM*0.8;
+    font-size: $fontSemiBigM * 0.85;
   }
   .about-main-block .about-main-block-ans {
-    font-size: $fontSmallM;
+    font-size: $fontSmallM * 1.2;
     letter-spacing: -0.05em;
   }
 
@@ -1675,10 +1668,10 @@ $quoteSectionHeight: 30vw;
     height: 18vw;
     width: 18vw;
 
-    right: 5vw;
+    right: 2vw;
     margin-top: 20vw;
 
-    font-size: $fontSmallM*0.75;
+    font-size: $fontSmallM;
     text-align: center;
   }
 
