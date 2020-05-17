@@ -54,78 +54,79 @@
 
     "webapp-title": `
     <div class="skip work-showcase-webapp">
-      <div class="skip">
+      <div class="skip work-showcase-webapp-img" style="background-image: url('./img/borrowmoney.png');">
         <div class="skip work-showcase-webapp-block">
           <div class="skip work-showcase-webapp-des">Debts-tracker and reminder via email</div>
           <div class="skip work-showcase-webapp-link">
-            <a target="_blank" href="https://borrowmoney-thp.herokuapp.com/">demo</a>
-            <a target="_blank" href="https://github.com/tahaphuong/borrowMoney">github</a>
+            <a target="_blank" href="https://borrowmoney-thp.herokuapp.com/" title="demo web"><ion-icon name="link-outline"></ion-icon></a>
+            <a target="_blank" href="https://github.com/tahaphuong/borrowMoney" title="detail & source code"><ion-icon name="code-slash-outline"></ion-icon></a>
           </div>
         </div>
-        <div class="skip work-showcase-webapp-img" style="background-image: url('./img/borrowmoney.png');"></div>
       </div>
 
-      <div class="skip">
-        <div class="skip work-showcase-webapp-img" style="background-image: url('./img/chat.png');"></div>
+      <div class="skip work-showcase-webapp-img" style="background-image: url('./img/chat.png');">
         <div class="skip work-showcase-webapp-block">
           <div class="skip work-showcase-webapp-des">A simple chat webapp.</div>
           <div class="skip work-showcase-webapp-link">
-            <a target="_blank" href="https://tahaphuong.github.io/chat">demo</a>
-            <a target="_blank" href="https://github.com/tahaphuong/chat">github</a>
+            <a target="_blank" href="https://tahaphuong.github.io/chat" title="demo web"><ion-icon name="link-outline"></ion-icon></a>
+            <a target="_blank" href="https://github.com/tahaphuong/chat" title="detail & source code"><ion-icon name="code-slash-outline"></ion-icon></a>
           </div>
         </div>
       </div>
-
-      <div class="skip">
+  
+      <div class="skip work-showcase-webapp-img" style="background-image: url('./img/eclass.png');">
         <div class="skip work-showcase-webapp-block">
           <div class="skip work-showcase-webapp-des">Homework-manager for teachers & students.</div>
           <div class="skip work-showcase-webapp-link">
-            <a target="_blank" href="https://eclass-thp.herokuapp.com/">demo</a>
-            <a target="_blank" href="https://github.com/tahaphuong/eclass">github</a>
+            <a target="_blank" href="https://eclass-thp.herokuapp.com/" title="demo web"><ion-icon name="link-outline"></ion-icon></a>
+            <a target="_blank" href="https://github.com/tahaphuong/eclass" title="detail & source code"><ion-icon name="code-slash-outline"></ion-icon></a>
           </div>
         </div>
-        <div class="skip work-showcase-webapp-img" style="background-image: url('./img/eclass.png');"></div>
       </div>
-
+      <div id="filler" class="skip work-showcase-webapp-img" style="border-bottom: none">
+        <div class="skip work-showcase-webapp-block">
+          <ion-icon class="skip work-showcase-webapp-des" name="pizza-outline" style="font-size: 5vw; color: #353535; transition: all 0.4s"></ion-icon>
+        </div>
+      </div>
     </div>
     `,
 
     "staticweb-title": `
 
     <div class="skip work-showcase-webapp">
-      <div class="skip">
+
+      <div class="skip work-showcase-webapp-img" style="background-image: url('./img/health.png');">
         <div class="skip work-showcase-webapp-block">
-          <div class="skip work-showcase-webapp-des">My first website I have ever created!<br>Health/lifestyle test & tips<br>(self-design)</div>
+          <div class="skip work-showcase-webapp-des">My first website I have ever created!<br>Health/lifestyle test & tips (self-design)</div>
           <div class="skip work-showcase-webapp-link">
-            <a target="_blank" href="https://tahaphuong.github.io/health">demo</a>
-            <a target="_blank" href="https://github.com/tahaphuong/health">github</a>
+            <a target="_blank" href="https://tahaphuong.github.io/health" title="demo web"><ion-icon name="link-outline"></ion-icon></a>
+            <a target="_blank" href="https://github.com/tahaphuong/health" title="detail & source code"><ion-icon name="code-slash-outline"></ion-icon></a>
           </div>
         </div>
-        <div class="skip work-showcase-webapp-img" style="background-image: url('./img/health.png');"></div>
       </div>
-
-      <div class="skip">
-        <div class="skip work-showcase-webapp-img" style="background-image: url('./img/hac.png');"></div>
+      <div class="skip work-showcase-webapp-img" style="background-image: url('./img/hac.png');">
         <div class="skip work-showcase-webapp-block">
           <div class="skip work-showcase-webapp-des">A landing page for my school's art club.<br>(self-design)</div>
           <div class="skip work-showcase-webapp-link">
-            <a target="_blank" href="https://hsgsartclub.github.io">demo</a>
-            <a target="_blank" href="https://github.com/hsgsartclub/hsgsartclub.github.io">github</a>
+            <a target="_blank" href="https://hsgsartclub.github.io" title="demo web"><ion-icon name="link-outline"></ion-icon></a>
+            <a target="_blank" href="https://github.com/hsgsartclub/hsgsartclub.github.io" title="detail & source code"><ion-icon name="code-slash-outline"></ion-icon></a>
           </div>
         </div>
       </div>
-
-      <div class="skip">
+      <div class="skip work-showcase-webapp-img" style="background-image: url('./img/udic.png');">
         <div class="skip work-showcase-webapp-block">
           <div class="skip work-showcase-webapp-des">Landing page for a housing corporation<br>(responsive design)</div>
           <div class="skip work-showcase-webapp-link">
-            <a target="_blank" href="https://tahaphuong.github.io/udicTest">demo</a>
-            <a target="_blank" href="https://github.com/tahaphuong/udicTest">github</a>
+            <a target="_blank" href="https://tahaphuong.github.io/udicTest" title="demo web"><ion-icon name="link-outline"></ion-icon></a>
+            <a target="_blank" href="https://github.com/tahaphuong/udicTest" title="detail & source code"><ion-icon name="code-slash-outline"></ion-icon></a>
           </div>
         </div>
-        <div class="skip work-showcase-webapp-img" style="background-image: url('./img/udic.png');"></div>
       </div>
-
+      <div id="filler" class="skip work-showcase-webapp-img" style="border-bottom: none">
+        <div class="skip work-showcase-webapp-block">
+          <ion-icon class="skip work-showcase-webapp-des" name="rocket-outline" style="font-size: 5vw; color: #353535; transition: all 0.4s"></ion-icon>
+        </div>
+      </div>
     </div>
     `,
 
@@ -136,13 +137,11 @@
             <div class="skip work-showcase-mobile-block-title">A film app</div>
             <br><br>
             <div class="skip work-showcase-mobile-block-des">
-              When user creates an acount, a user store will be automatically created on firestore. User can look up film and save the film to the download list.
+              User can look up film and save favourite films to the download list - which is synchronized by Firebase storage.
               <br><br>
-              I use "global state" to make sure the data changes will be updated in all screens.
+              I use "global state" to make the data changes updated in all screens.
               <br><br>
-              I also applied "Lazy load" with Flatlist in order to enhance the performance on the "Search" screen.
-              <br><br>
-              It took me around 1 week to get used to React Native and create the UI for this app, and around 2 weeks to finish the rest.
+              "Loading on scroll" is applied to search result screen in order to enhance the performance.
               <br><br><br>
               <a target="_blank" href="https://github.com/tahaphuong/filmRN">Github link</a>
             </div>
@@ -193,7 +192,6 @@
 
         // get prevScroll => compare to scroll position 
         //=> in order to check scroll direction
-
         prevScroll = scrollingPos;
     });
     
@@ -201,13 +199,9 @@
     cursorBall("hec-link", "hec-ball");
   }
 
-
-
-    // make div appear on scroll to bottom
+  // make div appear on scroll to bottom
   function divAppear(scrollingPos, id) {
     let section = document.getElementById(id)
-
-
     if (section.offsetTop - scrollingPos < window.innerHeight) {
       switch (id) {
         case 'quote': 
@@ -307,9 +301,25 @@
     $("html, body").stop().animate({scrollTop: workMain.offsetTop}, 700, 'swing');
 
     let showcase = document.getElementById("work-showcase");
-
     showcase.innerHTML = workHTML[currentWork]
 
+    if (currentWork == "webapp-title" || currentWork == "staticweb-title") {
+      let imgs = document.getElementsByClassName("work-showcase-webapp-img")
+      for (let ele of imgs) {
+        let des = ele.getElementsByClassName("work-showcase-webapp-block")[0]
+        ele.onmouseover = function() {
+          des.style.opacity = 1
+          des.style.visibility = "visible"
+
+        }
+        des.onmouseleave = function() {
+          des.style.opacity = 0;
+          setTimeout(function(){
+            des.style.display = "hidden"
+          }, 400)
+        }
+      }
+    }
   }
 
 

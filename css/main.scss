@@ -24,8 +24,17 @@ $lightWhite: rgb(250, 250, 250);
 $light: 400;
 $bold: 700;
 
-// standardized size
-$mainWidth: 93vw; // scroll-bar == 1vw; nav == 7vw
+// components size
+$navWidth: 7vw;
+$imgHomeWidth: 25vw;
+$imgHandWidth: 20vw;
+$doublequotesWidth: 7vw;
+$scrollBarWidth: 0.6vw;
+
+$quoteSectionHeight: 30vw;
+
+// standard size
+$mainWidth: 100vw - $navWidth - $scrollBarWidth;
 $marginStandard: 4vw;
 
 $paddingButton: 0.3em 1em;
@@ -39,14 +48,6 @@ $fontSemiBig: calc(2vw + 2px);
 $fontSemiBigger: calc(3vw + 2px);
 $fontBig: calc(4vw + 2px);
 $fontHuge: calc(7vw + 2px);
-
-// components size
-$navWidth: 7vw;
-$imgHomeWidth: 25vw;
-$imgHandWidth: 20vw;
-$doublequotesWidth: 7vw;
-
-$quoteSectionHeight: 30vw;
 
 
 html,body {
@@ -80,7 +81,7 @@ a, button {
 
 ::-webkit-scrollbar {
   cursor: pointer;
-  width: 0.6vw;
+  width: $scrollBarWidth;
 }
 ::-webkit-scrollbar-thumb {
   cursor: pointer;
@@ -818,33 +819,26 @@ a, button {
   overflow-y: hidden;
 
   display: flex;
-  flex-direction: column;
-}
-
-.work-showcase-webapp>div {
-  width: 100%;
-  height: auto;
-
-  display: flex;
-  flex-direction: row;
-
-  transition: all 0.3s;
+  flex-wrap: wrap;
 }
 
 .work-showcase-webapp-img {
-  width: 50%;
+  width: ($mainWidth - $thinLine*2)/2;
   height: 27vw;
+  
+  border-left: $thinLine solid $lightGray;
+  border-bottom: $thinLine solid $lightGray;
 
   background-size: cover;
   background-position: center;
 }
 
-
 .work-showcase-webapp-block {
-  width: calc(50% - 6vw);  
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 
-  background-color: $lightWhite;
-  padding: 0 3vw;
+  background-color: rgba($lightWhite, 0.85);
 
   display: flex;
   flex-direction: column;
@@ -854,9 +848,7 @@ a, button {
   font-size: $fontSmall;
   letter-spacing: -0.04em;
   text-align: center;
-
 }
-
 
 .work-showcase-webapp-des {
   padding: $marginStandard*0.5;
@@ -870,34 +862,35 @@ a, button {
 .work-showcase-webapp-link {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  font-size: $fontSemi;
+  font-weight: 500;
+  color: rgb(45, 45, 45);
 }
 
 .work-showcase-webapp-link>a {
   cursor: pointer;
-  height: 0.25em;
+  height: 2.5em;
+  width: 2.5em;
 
-  // padding-bottom: 0.1em;
-  // border-bottom: 0.3em solid $blue;
+  margin: 0 0.5em;
+
   display: flex;
   align-items: center;
+  justify-content: center;
 
-  background-color: $blue;
+  border: $thinLine*1.5 solid $lightGray;
+  border-radius: 50%;
+  background-color: transparent;
   transition: all 0.4s;
-
-  font-size: $fontSemi;
-  font-family: $fontDisplay;
-  color: rgb(45, 45, 45);
 }
 
 .work-showcase-webapp-link>a:hover {
-  // border-bottom: 0.3em solid $pink;
-  background-color: $pink;
+  background-color: rgba($blue, 0.7);
 }
 
 .work-showcase-webapp-link>a:active {
-  // border-bottom: 0.3em solid $yellow;
-  background-color: $yellow;
+  background-color: rgba($yellow, 0.5);
 }
 
 
@@ -1538,8 +1531,6 @@ $quoteSectionHeight: 30vw;
 
   .work-main-block-des {
     display: none;
-    // font-size: $fontSmallM*0.6;
-    // color: $lightGray;
   }
 
   // showcase artwork 
@@ -1550,17 +1541,13 @@ $quoteSectionHeight: 30vw;
     display: none;
   }
 
-  // showcase webapp
-  .work-showcase-webapp {
-    padding: 5vw 5vw;
-  }
   .work-showcase-webapp>div {
     display: flex;
     flex-direction: column;
   }
 
-  .work-showcase-webapp>div:first-child, .work-showcase-webapp>div:last-child {
-    flex-direction: column-reverse;
+  .work-showcase-webapp>div:last-child {
+    display: none;
   }
 
   .work-showcase-webapp-img {
@@ -1592,6 +1579,10 @@ $quoteSectionHeight: 30vw;
     width: 100vw
   }
 
+  .work-showcase-mobile-block {
+    padding: $marginStandardM*1.2 $marginStandardM;
+  }
+
   .work-showcase-mobile-block-title {
     font-size: $fontSemiM;
   }
@@ -1610,13 +1601,12 @@ $quoteSectionHeight: 30vw;
   }
   .work-skills .work-skills-title {
     text-align: left;
-    font-size: $fontSemiBiggerM * 1.2;
+    font-size: $fontSemiBiggerM * 0.85;
   }
 
   .work-skills .work-skills-main {
     width: 100vw;
-    font-size: $fontSemiBigM;
-    flex-direction: column;
+    font-size: $fontSemiM;
     align-items: flex-start;
   }
 
