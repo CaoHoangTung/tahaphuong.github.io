@@ -53,8 +53,8 @@
 
     "webapp-title": `
     <div class="skip work-showcase-webapp">
-      <div class="skip">
-        <div class="skip work-showcase-webapp-img" style="background-image: url('./img/borrowmoney.png');"></div>
+
+      <div class="skip work-showcase-webapp-img" style="background-image: url('./img/borrowmoney.png');">
         <div class="skip work-showcase-webapp-block">
           <div class="skip work-showcase-webapp-des">Schulden-Tracker und Erinnerung per Email</div>
           <div class="skip work-showcase-webapp-link">
@@ -63,8 +63,8 @@
           </div>
         </div>
       </div>
-
-      <div class="skip">
+              
+      <div class="skip work-showcase-webapp-img" style="background-image: url('./img/chat.png');">
         <div class="skip work-showcase-webapp-block">
           <div class="skip work-showcase-webapp-des">ein simple Chat Web-app</div>
           <div class="skip work-showcase-webapp-link">
@@ -72,11 +72,9 @@
             <a target="_blank" href="https://github.com/tahaphuong/chat">github</a>
           </div>
         </div>
-        <div class="skip work-showcase-webapp-img" style="background-image: url('./img/chat.png');"></div>
       </div>
 
-      <div class="skip">
-        <div class="skip work-showcase-webapp-img" style="background-image: url('./img/eclass.png');"></div>
+      <div class="skip work-showcase-webapp-img" style="background-image: url('./img/eclass.png'); border-bottom: none">
         <div class="skip work-showcase-webapp-block">
           <div class="skip work-showcase-webapp-des">Hausaufgaben-Manager für Lehrer und Schüler.</div>
           <div class="skip work-showcase-webapp-link">
@@ -85,25 +83,28 @@
           </div>
         </div>
       </div>
-
+      <div id="filler" class="skip work-showcase-webapp-img" style="border-bottom: none">
+        <div class="skip work-showcase-webapp-block">
+          <ion-icon class="skip work-showcase-webapp-des" name="pizza-outline" style="font-size: 5vw; color: #353535; transition: all 0.4s"></ion-icon>
+        </div>
+      </div>
     </div>
     `,
 
     "staticweb-title": `
 
     <div class="skip work-showcase-webapp">
-      <div class="skip">
-        <div class="skip work-showcase-webapp-img" style="background-image: url('./img/health.png');"></div>
+      <div class="skip work-showcase-webapp-img" style="background-image: url('./img/health.png');">
         <div class="skip work-showcase-webapp-block">
-          <div class="skip work-showcase-webapp-des">Meine erste Webseite!<br>Gesundheit/Lebenstil Tipps & Tests(self-design)</div>
+          <div class="skip work-showcase-webapp-des">Meine erste Webseite!<br>Gesundheit/Lebenstil Tipps & Tests (self-design)</div>
           <div class="skip work-showcase-webapp-link">
             <a target="_blank" href="https://tahaphuong.github.io/health">demo</a>
             <a target="_blank" href="https://github.com/tahaphuong/health">github</a>
           </div>
         </div>
       </div>
-
-      <div class="skip">
+                
+      <div class="skip work-showcase-webapp-img" style="background-image: url('./img/hac.png');">
         <div class="skip work-showcase-webapp-block">
           <div class="skip work-showcase-webapp-des">Ein Landing-Page für den Kunst-klub meiner Schule. (self-design)</div>
           <div class="skip work-showcase-webapp-link">
@@ -111,11 +112,9 @@
             <a target="_blank" href="https://github.com/hsgsartclub/hsgsartclub.github.io">github</a>
           </div>
         </div>
-        <div class="skip work-showcase-webapp-img" style="background-image: url('./img/hac.png');"></div>
       </div>
 
-      <div class="skip">
-        <div class="skip work-showcase-webapp-img" style="background-image: url('./img/udic.png');"></div>
+      <div class="skip work-showcase-webapp-img" style="background-image: url('./img/udic.png'); border-bottom: none">
         <div class="skip work-showcase-webapp-block">
           <div class="skip work-showcase-webapp-des">Ein Landing-Page für ein Immobilienunternehmen</div>
           <div class="skip work-showcase-webapp-link">
@@ -124,7 +123,12 @@
           </div>
         </div>
       </div>
-
+      
+      <div id="filler" class="skip work-showcase-webapp-img" style="border-bottom: none">
+        <div class="skip work-showcase-webapp-block">
+          <ion-icon class="skip work-showcase-webapp-des" name="rocket-outline" style="font-size: 5vw; color: #353535; transition: all 0.4s"></ion-icon>
+        </div>
+      </div>
     </div>
     `,
 
@@ -242,9 +246,7 @@
   // make div disappear on scroll to top
 
   function divDisappear(scrollingPos, id) {
-
     let section = document.getElementById(id);
-
     if (section.offsetTop - scrollingPos > window.innerHeight && section.offsetTop - scrollingPos < window.innerHeight + section.offsetHeight) {
 
       switch (id) {
@@ -304,11 +306,26 @@
 
     let workMain = document.getElementById("work-main")
     $("html, body").stop().animate({scrollTop: workMain.offsetTop}, 700, 'swing');
-
     let showcase = document.getElementById("work-showcase");
 
     showcase.innerHTML = workHTML[currentWork]
+    if (currentWork == "webapp-title" || currentWork == "staticweb-title") {
+      let imgs = document.getElementsByClassName("work-showcase-webapp-img")
+      for (let ele of imgs) {
+        let des = ele.getElementsByClassName("work-showcase-webapp-block")[0]
+        ele.onmouseover = function() {
+          des.style.opacity = 1
+          des.style.visibility = "visible"
 
+        }
+        des.onmouseleave = function() {
+          des.style.opacity = 0;
+          setTimeout(function(){
+            des.style.display = "hidden"
+          }, 400)
+        }
+      }
+    }
   }
 
 

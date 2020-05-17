@@ -55,6 +55,7 @@
     "webapp-title": `
     <div class="skip work-showcase-webapp">
       <div class="skip">
+      
         <div class="skip work-showcase-webapp-block">
           <div class="skip work-showcase-webapp-des">Debts-tracker and reminder via email</div>
           <div class="skip work-showcase-webapp-link">
@@ -62,6 +63,7 @@
             <a target="_blank" href="https://github.com/tahaphuong/borrowMoney">github</a>
           </div>
         </div>
+
         <div class="skip work-showcase-webapp-img" style="background-image: url('./img/borrowmoney.png');"></div>
       </div>
 
@@ -95,7 +97,7 @@
     <div class="skip work-showcase-webapp">
       <div class="skip">
         <div class="skip work-showcase-webapp-block">
-          <div class="skip work-showcase-webapp-des">My first website I have ever created!<br>Health/lifestyle test & tips<br>(self-design)</div>
+          <div class="skip work-showcase-webapp-des">My first website I have ever created!<br>Health/lifestyle test & tips (self-design)</div>
           <div class="skip work-showcase-webapp-link">
             <a target="_blank" href="https://tahaphuong.github.io/health">demo</a>
             <a target="_blank" href="https://github.com/tahaphuong/health">github</a>
