@@ -862,34 +862,35 @@ a, button {
 .work-showcase-webapp-link {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  font-size: $fontSemi;
+  font-weight: 500;
+  color: rgb(45, 45, 45);
 }
 
 .work-showcase-webapp-link>a {
   cursor: pointer;
-  height: 0.25em;
+  height: 2.5em;
+  width: 2.5em;
 
-  // padding-bottom: 0.1em;
-  // border-bottom: 0.3em solid $blue;
+  margin: 0 0.5em;
+
   display: flex;
   align-items: center;
+  justify-content: center;
 
-  background-color: $blue;
+  border: $thinLine*1.5 solid $lightGray;
+  border-radius: 50%;
+  background-color: transparent;
   transition: all 0.4s;
-
-  font-size: $fontSemi;
-  font-family: $fontDisplay;
-  color: rgb(45, 45, 45);
 }
 
 .work-showcase-webapp-link>a:hover {
-  // border-bottom: 0.3em solid $pink;
-  background-color: $pink;
+  background-color: rgba($blue, 0.7);
 }
 
 .work-showcase-webapp-link>a:active {
-  // border-bottom: 0.3em solid $yellow;
-  background-color: $yellow;
+  background-color: rgba($yellow, 0.5);
 }
 
 
@@ -1530,8 +1531,6 @@ $quoteSectionHeight: 30vw;
 
   .work-main-block-des {
     display: none;
-    // font-size: $fontSmallM*0.6;
-    // color: $lightGray;
   }
 
   // showcase artwork 
@@ -1547,8 +1546,8 @@ $quoteSectionHeight: 30vw;
     flex-direction: column;
   }
 
-  .work-showcase-webapp>div:first-child, .work-showcase-webapp>div:last-child {
-    flex-direction: column-reverse;
+  .work-showcase-webapp>div:last-child {
+    display: none;
   }
 
   .work-showcase-webapp-img {
@@ -1580,6 +1579,10 @@ $quoteSectionHeight: 30vw;
     width: 100vw
   }
 
+  .work-showcase-mobile-block {
+    padding: $marginStandardM*1.2 $marginStandardM;
+  }
+
   .work-showcase-mobile-block-title {
     font-size: $fontSemiM;
   }
@@ -1604,7 +1607,6 @@ $quoteSectionHeight: 30vw;
   .work-skills .work-skills-main {
     width: 100vw;
     font-size: $fontSemiM;
-    flex-direction: column;
     align-items: flex-start;
   }
 
