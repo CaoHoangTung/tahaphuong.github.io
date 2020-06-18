@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -449,3 +450,6 @@ function changeColorOnClick(id, mainClasses) {
   doublequotesColor += 1;
 }
 
+=======
+alert("HELLO")
+>>>>>>> 3c8b0ad5b67972958df13479ee080290d26e7e87
